@@ -5,7 +5,7 @@ WORKDIR /usr/src
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 RUN \
-  apk add --no-cache --virtual dumb-init && \
+  apk add --no-cache dumb-init yarn && \
   npm install -g npm@latest && \
   npm cache add @agm/core@1.0.0-beta.5 && \
   npm cache add @angular/animations@8.0.0 && \
